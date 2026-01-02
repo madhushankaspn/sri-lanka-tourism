@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Sri Lanka - Official Tourism Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Discover Sri Lanka Logo" class="logo-image">
+                <span>Discover Sri Lanka</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="places.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Places</a>
+                <a href="photos.html" class="nav-link"><i class="fas fa-images"></i> Photos & Videos</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active" style="background-image: url('images/1.jpg');">
+                    <div class="slide-content">
+                        <h1>Discover The Pearl of the Indian Ocean</h1>
+                        <p>Experience pristine beaches, ancient heritage, and breathtaking landscapes</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('images/6.jpg');">
+                    <div class="slide-content">
+                        <h1>Ancient Cities & Rich Culture</h1>
+                        <p>Explore UNESCO World Heritage Sites dating back thousands of years</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('images/5.jpg');">
+                    <div class="slide-content">
+                        <h1>Wildlife & Nature</h1>
+                        <p>Encounter elephants, leopards, and diverse ecosystems</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('images/4.jpg');">
+                    <div class="slide-content">
+                        <h1>Adventure & Activities</h1>
+                        <p>From surfing to hiking, Sri Lanka offers endless adventures</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <h2>Find Your Perfect Sri Lankan Experience</h2>
+                <div class="search-form">
+                    <input type="text" placeholder="Search destinations, attractions, activities..." id="searchInput">
+                    <button type="button" id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="search-categories">
+                    <span>Popular:</span>
+                    <a href="#">Beaches</a>
+                    <a href="#">Cultural Sites</a>
+                    <a href="#">Wildlife</a>
+                    <a href="#">Hiking</a>
+                    <a href="#">Temples</a>
+                </div>
+            </div>
+            
+            <!-- Video Player -->
+            <div class="video-player">
+                <div class="video-header">
+                    <h3><i class="fas fa-play-circle"></i> Experience Sri Lanka</h3>
+                    <button class="video-control" id="playPauseBtn"><i class="fas fa-pause"></i></button>
+                </div>
+<div class="video-container">
+    <video 
+        id="promoVideo" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+    >
+        <source src="videos/Homevideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Places -->
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <p class="section-subtitle">Explore some of Sri Lanka's most iconic locations</p>
+            
+            <div class="places-grid">
+                <div class="place-card">
+                    <div class="place-img" style="background-image: url('images/6.jpg');">
+                        <span class="place-tag">Cultural</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Sigiriya Rock Fortress</h3>
+                        <p>Ancient rock fortress and palace ruins with stunning frescoes</p>
+                        <a href="place-detail.html?place=sigiriya" class="place-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <div class="place-img" style="background-image: url('images/8.jpg');">
+                        <span class="place-tag">Historical</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Ancient City of Polonnaruwa</h3>
+                        <p>Medieval capital with well-preserved ruins and statues</p>
+                        <a href="place-detail.html?place=polonnaruwa" class="place-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <div class="place-img" style="background-image: url('images/9.jpg');">
+                        <span class="place-tag">Wildlife</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Yala National Park</h3>
+                        <p>Famous for leopards, elephants, and diverse birdlife</p>
+                        <a href="place-detail.html?place=yala" class="place-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <div class="place-img" style="background-image: url('images/7.jpg');">
+                        <span class="place-tag">Beach</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Mirissa Beach</h3>
+                        <p>Beautiful beach known for whale watching and surfing</p>
+                        <a href="place-detail.html?place=mirissa" class="place-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="places.html" class="btn-primary">View All Destinations <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><img src="images/logo.png" alt="Discover Sri Lanka Logo" class="logo-image"></i> Discover Sri Lanka</h3>
+                    <p>Your ultimate guide to exploring the beautiful island of Sri Lanka. Discover pristine beaches, ancient heritage, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="places.html">Places</a></li>
+                        <li><a href="photos.html">Photos & Videos</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Popular Destinations</h4>
+                    <ul>
+                        <li><a href="place-detail.html?place=sigiriya">Sigiriya</a></li>
+                        <li><a href="place-detail.html?place=kandy">Kandy</a></li>
+                        <li><a href="place-detail.html?place=galle">Galle Fort</a></li>
+                        <li><a href="place-detail.html?place=ella">Ella</a></li>
+                        <li><a href="place-detail.html?place=anuradhapura">Anuradhapura</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo 07, Sri Lanka</li>
+                        <li><i class="fas fa-phone"></i> +94 11 234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@discoversrilanka.lk</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Discover Sri Lanka Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

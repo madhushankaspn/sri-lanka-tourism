@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places to Visit in Sri Lanka | Discover Sri Lanka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Discover Sri Lanka Logo" class="logo-image">
+                <span>Discover Sri Lanka</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="places.html" class="nav-link active"><i class="fas fa-map-marked-alt"></i> Places</a>
+                <a href="photos.html" class="nav-link"><i class="fas fa-images"></i> Photos & Videos</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Places Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Explore Sri Lanka</h1>
+            <p>Discover the best destinations across the island, from ancient cities to pristine beaches</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="search-filter">
+                <div class="search-box places-search">
+                    <input type="text" placeholder="Search places by name, location, or type..." id="placesSearch">
+                    <button type="button" id="placesSearchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-dropdown">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="cultural">Cultural & Historical</option>
+                            <option value="beach">Beaches & Coastal</option>
+                            <option value="wildlife">Wildlife & Nature</option>
+                            <option value="adventure">Adventure & Activities</option>
+                            <option value="hill">Hill Country</option>
+                            <option value="religious">Religious Sites</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    
+                    <div class="filter-dropdown">
+                        <select id="regionFilter">
+                            <option value="all">All Regions</option>
+                            <option value="western">Western Province</option>
+                            <option value="central">Central Province</option>
+                            <option value="southern">Southern Province</option>
+                            <option value="north-central">North Central</option>
+                            <option value="eastern">Eastern Province</option>
+                            <option value="uva">Uva Province</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    
+                    <button class="btn-secondary" id="resetFilters">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Grid -->
+    <section class="places-section">
+        <div class="container">
+            <div class="places-categories">
+                <h2 class="section-title">Browse by Category</h2>
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All Places</button>
+                    <button class="category-tab" data-category="cultural">Cultural & Historical</button>
+                    <button class="category-tab" data-category="beach">Beaches</button>
+                    <button class="category-tab" data-category="wildlife">Wildlife</button>
+                    <button class="category-tab" data-category="adventure">Adventure</button>
+                </div>
+            </div>
+            
+            <div class="places-container" id="placesContainer">
+                <!-- Places will be loaded dynamically with JavaScript -->
+                <!-- Sample place cards are shown as fallback -->
+                <div class="place-card" data-category="cultural" data-region="north-central">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1592400601113-31c7e6dcc8b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <span class="place-tag">Cultural</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Sigiriya Rock Fortress</h3>
+                        <p class="place-region">North Central Province</p>
+                        <p>Ancient rock fortress with palace ruins, gardens, and stunning frescoes. A UNESCO World Heritage Site.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (1,234 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=sigiriya" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="wildlife" data-region="southern">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1573843989-c9d9a2a1e89c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <span class="place-tag">Wildlife</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Yala National Park</h3>
+                        <p class="place-region">Southern Province</p>
+                        <p>Famous for leopards, elephants, and diverse birdlife. The most visited national park in Sri Lanka.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (2,567 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=yala" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="beach" data-region="southern">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e30bf7349d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');">
+                        <span class="place-tag">Beach</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Mirissa Beach</h3>
+                        <p class="place-region">Southern Province</p>
+                        <p>Beautiful beach known for whale watching, surfing, and stunning sunsets. A popular tourist destination.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (3,421 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=mirissa" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="cultural" data-region="central">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1564507004663-b6dfb3e2ede5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80');">
+                        <span class="place-tag">Cultural</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Temple of the Tooth, Kandy</h3>
+                        <p class="place-region">Central Province</p>
+                        <p>Sacred Buddhist temple housing the relic of the tooth of the Buddha. A UNESCO World Heritage Site.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (4,832 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=kandy" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="adventure" data-region="uva">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1593693399741-2f8fe4b8c7b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');">
+                        <span class="place-tag">Adventure</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Ella Rock Hike</h3>
+                        <p class="place-region">Uva Province</p>
+                        <p>Popular hiking trail offering breathtaking views of the hill country and Ella Gap.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (2,156 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=ella" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="cultural" data-region="southern">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80');">
+                        <span class="place-tag">Cultural</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Galle Fort</h3>
+                        <p class="place-region">Southern Province</p>
+                        <p>Historical fortress built by the Portuguese and Dutch with well-preserved colonial architecture.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (3,789 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=galle" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="wildlife" data-region="central">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');">
+                        <span class="place-tag">Wildlife</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Udawalawe National Park</h3>
+                        <p class="place-region">Central Province</p>
+                        <p>Famous for large herds of elephants and diverse bird species. Ideal for elephant watching.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (1,987 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=udawalawe" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="place-card" data-category="beach" data-region="western">
+                    <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <span class="place-tag">Beach</span>
+                    </div>
+                    <div class="place-info">
+                        <h3>Negombo Beach</h3>
+                        <p class="place-region">Western Province</p>
+                        <p>Popular beach near Colombo airport with fishing villages, lagoons, and water sports activities.</p>
+                        <div class="place-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.0 (2,345 reviews)</span>
+                        </div>
+                        <a href="place-detail.html?place=negombo" class="place-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-umbrella-beach"></i> Discover Sri Lanka</h3>
+                    <p>Your ultimate guide to exploring the beautiful island of Sri Lanka. Discover pristine beaches, ancient heritage, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="places.html">Places</a></li>
+                        <li><a href="photos.html">Photos & Videos</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Popular Destinations</h4>
+                    <ul>
+                        <li><a href="place-detail.html?place=sigiriya">Sigiriya</a></li>
+                        <li><a href="place-detail.html?place=kandy">Kandy</a></li>
+                        <li><a href="place-detail.html?place=galle">Galle Fort</a></li>
+                        <li><a href="place-detail.html?place=ella">Ella</a></li>
+                        <li><a href="place-detail.html?place=anuradhapura">Anuradhapura</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo 07, Sri Lanka</li>
+                        <li><i class="fas fa-phone"></i> +94 11 234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@discoversrilanka.lk</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Discover Sri Lanka Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
