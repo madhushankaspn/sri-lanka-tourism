@@ -540,3 +540,58 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+
+// Add these functions to your existing script.js
+
+// Check login status on page load
+function checkLoginStatus() {
+    const userLoggedIn = localStorage.getItem('userLoggedIn');
+    const userEmail = localStorage.getItem('userEmail');
+    
+    if (userLoggedIn === 'true' && userEmail) {
+        // Update navbar to show user profile
+        updateNavbarForLoggedInUser(userEmail);
+    }
+}
+
+// Update navbar with user profile
+function updateNavbarForLoggedInUser(email) {
+    const navMenu = document.querySelector('.nav-menu');
+    if (!navMenu) return;
+    
+    // Remove login link if exists
+    const loginLink = navMenu.querySelector('a[href="login.html"]');
+    if (loginLink) {
+        loginLink.remove();
+    }
+    
+    // Add user profile
+    const userProfile = document.createElement('a');
+    userProfile.href = '#';
+    userProfile.className = 'nav-link user-profile';
+    userProfile.innerHTML = `
+        <div class="user-avatar-small">
+            <i class="fas fa-user"></i>
+        </div>
+        <span>${email.split('@')[0]}</span>
+    `;
+    
+    navMenu.appendChild(userProfile);
+    
+    // Add logout functionality
+    userProfile.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (confirm('Are you sure you want to logout?')) {
+            localStorage.removeItem('userLoggedIn');
+            localStorage.removeItem('userEmail');
+            window.location.reload();
+        }
+    });
+}
+
+// Call this on page load
+document.addEventListener('DOMContentLoaded', function() {
+    checkLoginStatus();
+    
+    // Your existing code here...
+});
