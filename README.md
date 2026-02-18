@@ -4,14 +4,14 @@ A responsive tourism website built with HTML, CSS, and JavaScript to help travel
 
 ---
 
-## 🖥️ Live Preview
+## 🔗 Live Site
 
-> Open `index.html` in your browser to get started.
+👉 **[https://madhushankaspn.github.io/sri-lanka-tourism/](https://madhushankaspn.github.io/sri-lanka-tourism/)**
 
 ---
 
-## 📸 Screenshots
-<img width="1889" height="760" alt="image" src="https://github.com/user-attachments/assets/35ae1954-5a59-45af-a512-21bbf3e27553" />
+<img width="1891" height="756" alt="image" src="https://github.com/user-attachments/assets/8d01a9c5-96e5-4455-8d90-99d8d0a7cdf5" />
+
 
 | Home Page |
 |-----------|
@@ -94,7 +94,7 @@ discover-sri-lanka/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/discover-sri-lanka.git
+   git clone https://github.com/madhushankaspn/sri-lanka-tourism.git
    ```
 
 2. **Navigate into the project folder**
