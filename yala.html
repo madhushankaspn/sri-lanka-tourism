@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -31,7 +31,7 @@
         </div>
     </nav>
 
-    <!-- Place Detail Header -->
+    
     <section class="place-detail-header">
         <div class="container">
             <div class="place-header-content">
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <!-- Place Image Slider -->
+    
     <section class="place-slider-section">
         <div class="container">
             <div class="place-slider-container">
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <!-- Place Details -->
+    
     <section class="place-details">
         <div class="container">
             <div class="place-details-content">
@@ -174,7 +174,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    
     <section class="place-services">
         <div class="container">
             <h2 class="section-title">Services Near Yala National Park</h2>
@@ -291,7 +291,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -346,25 +346,25 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Place detail page functionality
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize navigation
+
             if (typeof initNavigation === 'function') {
                 initNavigation();
             }
             
-            // Set active nav link
+
             if (typeof setActiveNavLink === 'function') {
                 setActiveNavLink();
             }
             
-            // Place slider functionality
+
             initPlaceSlider();
             
-            // Service tabs functionality
+
             initServiceTabs();
             
-            // Share buttons functionality
+
             initShareButtons();
         });
         
@@ -377,11 +377,11 @@
             let currentSlide = 0;
             
             function showSlide(index) {
-                // Hide all slides
+
                 slides.forEach(slide => slide.classList.remove('active'));
                 thumbs.forEach(thumb => thumb.classList.remove('active'));
                 
-                // Show current slide and thumb
+
                 slides[index].classList.add('active');
                 thumbs[index].classList.add('active');
                 currentSlide = index;
@@ -397,16 +397,16 @@
                 showSlide(prevIndex);
             }
             
-            // Add event listeners
+
             if (prevBtn) prevBtn.addEventListener('click', prevSlide);
             if (nextBtn) nextBtn.addEventListener('click', nextSlide);
             
-            // Thumbnail click events
+
             thumbs.forEach((thumb, index) => {
                 thumb.addEventListener('click', () => showSlide(index));
             });
             
-            // Auto slide every 5 seconds
+
             setInterval(nextSlide, 5000);
         }
         
@@ -418,11 +418,11 @@
                 tab.addEventListener('click', function() {
                     const service = this.getAttribute('data-service');
                     
-                    // Update active tab
+
                     tabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Show corresponding service list
+
                     serviceLists.forEach(list => {
                         list.classList.remove('active');
                         if (list.id === service) {

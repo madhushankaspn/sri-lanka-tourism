@@ -1,6 +1,6 @@
-// Admin Dashboard JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Toggle sidebar on mobile
+
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebar = document.querySelector('.admin-sidebar');
     
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Menu item activation
+
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -19,22 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const targetId = item.getAttribute('href').substring(1);
             
-            // Update active menu item
+
             menuItems.forEach(i => i.classList.remove('active'));
             item.classList.add('active');
             
-            // Update page title
+
             const pageTitle = document.querySelector('.admin-header h1');
             if (pageTitle) {
                 pageTitle.textContent = getPageTitle(targetId);
             }
             
-            // Load content (simulated)
+
             loadSectionContent(targetId);
         });
     });
     
-    // Admin logout
+
     const adminLogout = document.getElementById('adminLogout');
     if (adminLogout) {
         adminLogout.addEventListener('click', (e) => {
@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Logging out...');
                 window.location.href = 'index.html';
                 
-                // Clear admin session
+
                 localStorage.removeItem('adminLoggedIn');
             }
         });
     }
     
-    // Quick action buttons
+
     document.querySelectorAll('.action-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const action = this.querySelector('span').textContent;
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Edit buttons in tables
+
     document.querySelectorAll('.btn-icon.edit').forEach(btn => {
         btn.addEventListener('click', function() {
             const row = this.closest('tr');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Delete buttons
+
     document.querySelectorAll('.btn-icon.delete, .btn-sm.delete').forEach(btn => {
         btn.addEventListener('click', function() {
             if (confirm('Are you sure you want to delete this item?')) {
@@ -82,13 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Search functionality
+
     const adminSearch = document.querySelector('.admin-search input');
     if (adminSearch) {
         adminSearch.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
             
-            // Search in tables (simplified)
+
             document.querySelectorAll('.admin-table tbody tr').forEach(row => {
                 const text = row.textContent.toLowerCase();
                 row.style.display = text.includes(searchTerm) ? '' : 'none';
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Modal handling
+
     const modal = document.getElementById('addDestinationModal');
     const closeModalBtns = document.querySelectorAll('.close-modal');
     
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Destination form
+
     const addDestinationForm = document.getElementById('addDestinationForm');
     if (addDestinationForm) {
         addDestinationForm.addEventListener('submit', (e) => {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Notification bell
+
     const notification = document.querySelector('.notification');
     if (notification) {
         notification.addEventListener('click', () => {
@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Simulate admin authentication
+
     checkAdminAuth();
 });
 
-// Helper functions
+
 function getPageTitle(sectionId) {
     const titles = {
         'dashboard': 'Dashboard Overview',
@@ -156,10 +156,10 @@ function loadSectionContent(sectionId) {
     const contentArea = document.querySelector('.admin-content');
     if (!contentArea) return;
     
-    // In a real application, this would load content via AJAX
+
     console.log(`Loading content for: ${sectionId}`);
     
-    // Simulate loading
+
     const originalContent = contentArea.innerHTML;
     contentArea.innerHTML = `
         <div style="text-align: center; padding: 50px;">
@@ -169,7 +169,7 @@ function loadSectionContent(sectionId) {
     `;
     
     setTimeout(() => {
-        // Load sample content based on section
+
         contentArea.innerHTML = getSectionContent(sectionId);
     }, 500);
 }
@@ -199,16 +199,16 @@ function getSectionContent(sectionId) {
 }
 
 function checkAdminAuth() {
-    // In a real application, this would check authentication token
+
     const isAdmin = localStorage.getItem('adminLoggedIn') === 'true';
     
     if (!isAdmin && !window.location.href.includes('login.html')) {
-        // Redirect to login if not authenticated
+
         alert('Please login as admin first');
         window.location.href = 'login.html';
     }
 }
 
-// Make functions available globally
+
 window.loadSectionContent = loadSectionContent;
 window.getPageTitle = getPageTitle;

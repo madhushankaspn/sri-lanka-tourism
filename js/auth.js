@@ -1,6 +1,6 @@
-// Authentication JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Tab switching
+
     const tabs = document.querySelectorAll('.auth-tab');
     const forms = document.querySelectorAll('.auth-form');
     
@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         tab.addEventListener('click', () => {
             const tabId = tab.getAttribute('data-tab');
             
-            // Update active tab
+            
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             
-            // Show active form
+           
             forms.forEach(form => {
                 form.classList.remove('active');
                 if (form.id === `${tabId}Form`) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Toggle password visibility
+   
     const toggleLoginPassword = document.getElementById('toggleLoginPassword');
     const loginPassword = document.getElementById('loginPassword');
     const toggleSignupPassword = document.getElementById('toggleSignupPassword');
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Modal handling
     const forgotPasswordLink = document.querySelector('.forgot-password');
     const forgotPasswordModal = document.getElementById('forgotPasswordModal');
     const closeModalBtns = document.querySelectorAll('.close-modal');
@@ -62,14 +61,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close modal when clicking outside
+   
     window.addEventListener('click', (e) => {
         if (e.target === forgotPasswordModal) {
             forgotPasswordModal.style.display = 'none';
         }
     });
     
-    // Form submission
+    
     const loginForm = document.getElementById('loginFormElement');
     const signupForm = document.getElementById('signupFormElement');
     
@@ -81,13 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('loginPassword').value;
             const rememberMe = document.getElementById('rememberMe').checked;
             
-            // Simple validation
             if (!email || !password) {
                 alert('Please fill in all fields');
                 return;
             }
             
-            // Simulate login process
+            
             simulateLogin(email, password, rememberMe);
         });
     }
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const userType = document.getElementById('userType').value;
             const agreeTerms = document.getElementById('agreeTerms').checked;
             
-            // Validation
+           
             if (!firstName || !lastName || !email || !password || !confirmPassword || !userType) {
                 alert('Please fill in all required fields');
                 return;
@@ -125,12 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate signup process
+           
             simulateSignup(firstName, lastName, email, password, userType);
         });
     }
     
-    // Forgot password form
+    
     const forgotPasswordForm = document.getElementById('forgotPasswordForm');
     if (forgotPasswordForm) {
         forgotPasswordForm.addEventListener('submit', (e) => {
@@ -142,13 +140,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate password reset
+
             alert(`Password reset link has been sent to ${email}`);
             forgotPasswordModal.style.display = 'none';
         });
     }
     
-    // Social login buttons
+
     document.querySelectorAll('.social-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const platform = this.classList.contains('google') ? 'Google' : 'Facebook';
@@ -157,44 +155,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Simulate login function - CORRECTED VERSION
+
 function simulateLogin(email, password, rememberMe) {
-    // In a real application, this would be an API call
+    
     console.log('Login attempt:', { email, password, rememberMe });
     
-    // Show loading state
+    
     const loginBtn = document.querySelector('#loginFormElement .auth-btn');
     const originalText = loginBtn.innerHTML;
     loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
     loginBtn.disabled = true;
     
-    // Simulate API delay
+    
     setTimeout(() => {
-        // Check for admin login
+        
         if (email === 'admin@discoversrilanka.lk' && password === 'admin123') {
             alert('Login successful! Redirecting to admin panel...');
             
-            // STORE ADMIN SESSION - THIS IS THE FIX!
+            
             localStorage.setItem('adminLoggedIn', 'true');
             localStorage.setItem('adminEmail', email);
             localStorage.setItem('userType', 'admin');
             
-            // Also clear any regular user session
+            
             localStorage.removeItem('userLoggedIn');
             localStorage.removeItem('userEmail');
             
             window.location.href = 'admin.html';
         } else if (email && password) {
-            // For regular users
+           
             alert('Login successful! Redirecting to home page...');
             window.location.href = 'index.html';
             
-            // Store user session (simplified)
+            
             localStorage.setItem('userLoggedIn', 'true');
             localStorage.setItem('userEmail', email);
             localStorage.setItem('userType', 'user');
             
-            // Clear any admin session
+           
             localStorage.removeItem('adminLoggedIn');
             localStorage.removeItem('adminEmail');
         } else {
@@ -205,7 +203,7 @@ function simulateLogin(email, password, rememberMe) {
     }, 1500);
 }
 
-// Simulate signup function
+
 function simulateSignup(firstName, lastName, email, password, userType) {
     console.log('Signup attempt:', { firstName, lastName, email, password, userType });
     
@@ -217,10 +215,10 @@ function simulateSignup(firstName, lastName, email, password, userType) {
     setTimeout(() => {
         alert('Account created successfully! You can now login.');
         
-        // Switch to login tab
+        
         document.querySelector('[data-tab="login"]').click();
         
-        // Pre-fill email
+        
         document.getElementById('loginEmail').value = email;
         
         signupBtn.innerHTML = originalText;

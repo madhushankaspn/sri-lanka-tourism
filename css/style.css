@@ -1,6 +1,4 @@
-/* Authentication Styles - Modern Redesign */
 
-/* Background Images */
 .background-container {
     position: fixed;
     top: 0;
@@ -37,7 +35,7 @@
     z-index: -1;
 }
 
-/* Navigation */
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -96,7 +94,7 @@
     background-clip: text;
 }
 
-/* Main Container */
+
 .main-container {
     display: flex;
     align-items: center;
@@ -105,7 +103,6 @@
     padding: 40px 20px;
 }
 
-/* Auth Container */
 .auth-container {
     display: flex;
     max-width: 1100px;
@@ -130,7 +127,7 @@
     }
 }
 
-/* Left Info Panel */
+
 .info-panel {
     flex: 1;
     background: linear-gradient(135deg, #1a5f7a, #57a6a1);
@@ -269,7 +266,7 @@
     margin-bottom: 0;
 }
 
-/* Right Auth Panel */
+
 .auth-panel {
     flex: 1;
     padding: 50px 40px;
@@ -602,7 +599,7 @@
     text-decoration: underline;
 }
 
-/* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -682,7 +679,7 @@
     line-height: 1.5;
 }
 
-/* Footer */
+
 .footer {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -800,7 +797,7 @@
     text-decoration: underline;
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     .auth-container {
         flex-direction: column;
@@ -887,7 +884,7 @@
     }
 }
 
-/* Admin Dashboard Styles */
+
 .admin-container {
     display: flex;
     min-height: 100vh;
@@ -1440,7 +1437,7 @@
     }
 }
 
-/* CSS Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -1483,7 +1480,7 @@ h1, h2, h3, h4, h5 {
     padding: 0 20px;
 }
 
-/* Navigation Styles */
+
 .navbar {
     background-color: var(rgb(255, 255, 255));
     box-shadow: 0 2px 10px rgba(120, 181, 255, 0.1);
@@ -1511,9 +1508,9 @@ h1, h2, h3, h4, h5 {
     font-size: 1.5rem;
 }
 .logo img {
-    height: 50px;        /* change size here */
+    height: 50px;        
     width: auto;
-    margin-right: 10px; /* space between logo & text */
+    margin-right: 10px; 
 }
 
 
@@ -1555,7 +1552,7 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
 }
 
-/* Hero Section Styles */
+
 .hero {
     margin-top: 0;
     position: relative;
@@ -1662,7 +1659,7 @@ h1, h2, h3, h4, h5 {
     background: var(--white);
 }
 
-/* Search Container */
+
 .search-container {
     display: flex;
     gap: 30px;
@@ -1800,7 +1797,7 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
 }
 
-/* Quick Access Section */
+
 .quick-access {
     padding: 80px 0;
     background: var(--light);
@@ -1894,7 +1891,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-/* Button Styles */
+
 .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -1936,10 +1933,10 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
 }
 
-/* Footer Styles */
+
 .logo-image {
-    width: 120px;        /* adjust as you like */
-    height: 520px;        /* keeps aspect ratio */
+    width: 120px;        
+    height: 520px;        
     margin-bottom: 15px;
 }
 
@@ -2039,7 +2036,7 @@ h1, h2, h3, h4, h5 {
     font-size: 0.9rem;
 }
 
-/* Page Header */
+
 .page-header {
     padding: 100px 0 60px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -2059,7 +2056,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
-/* Filter Section */
+
 .filter-section {
     padding: 30px 0;
     background: var(--light);
@@ -2127,8 +2124,8 @@ h1, h2, h3, h4, h5 {
     pointer-events: none;
 }
 
-/* Places Section */
-/* Places Page Header with Background Image */
+
+
 .page-header {
     background: 
         linear-gradient(rgba(26, 115, 232, 0.308), rgba(26, 115, 232, 0.664)),
@@ -2140,8 +2137,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo-image{
-    width: 120px;        /* adjust as you like */
-    height: auto;        /* keeps aspect ratio */
+    width: 120px;        
+    height: auto;        
     margin-bottom: 15px;
 }    
 .places-section {
@@ -2231,7 +2228,7 @@ h1, h2, h3, h4, h5 {
     border-color: var(--primary);
 }
 
-/* Place Detail Styles */
+
 .place-detail-header {
     padding: 100px 0 30px;
     background: var(--light);
@@ -2287,7 +2284,7 @@ h1, h2, h3, h4, h5 {
     color: var(--text-light);
 }
 
-/* Place Slider */
+
 .place-slider-section {
     padding: 40px 0;
 }
@@ -2370,10 +2367,10 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
 }
 
-/* Place Details */
+
 .logo-image{
-    width: 120px;        /* adjust as you like */
-    height: auto;        /* keeps aspect ratio */
+    width: 120px;        
+    height: auto;        
     margin-bottom: 15px;
 }
 
@@ -2452,7 +2449,7 @@ h1, h2, h3, h4, h5 {
     color: var(--accent);
 }
 
-/* Sidebar */
+
 .sidebar-card {
     background: var(--white);
     border-radius: 10px;
@@ -2508,7 +2505,7 @@ h1, h2, h3, h4, h5 {
     transform: translateY(-3px);
 }
 
-/* Services Section */
+
 .place-services {
     padding: 60px 0;
     background: var(--light);
@@ -2604,7 +2601,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Upload Section */
+
 .upload-section {
     padding: 60px 0;
     background: var(--light);
@@ -2698,9 +2695,9 @@ h1, h2, h3, h4, h5 {
     outline: none;
     transition: var(--transition);
 }
-/* ===== PLACE DETAIL PAGE STYLES ===== */
 
-/* Place Detail Header */
+
+
 .place-detail-header {
     padding: 100px 0 30px;
     background: var(--light);
@@ -2766,7 +2763,7 @@ h1, h2, h3, h4, h5 {
     color: var(--accent);
 }
 
-/* Place Slider */
+
 .place-slider-section {
     padding: 40px 0;
 }
@@ -2849,7 +2846,7 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
 }
 
-/* Place Details */
+
 .place-details {
     padding: 60px 0;
 }
@@ -2925,7 +2922,7 @@ h1, h2, h3, h4, h5 {
     color: var(--accent);
 }
 
-/* Sidebar */
+
 .sidebar-card {
     background: var(--white);
     border-radius: 10px;
@@ -2981,7 +2978,7 @@ h1, h2, h3, h4, h5 {
     transform: translateY(-3px);
 }
 
-/* Services Section */
+
 .place-services {
     padding: 60px 0;
     background: var(--light);
@@ -3077,7 +3074,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Responsive Styles for Place Details */
+
 @media (max-width: 992px) {
     .place-details-content {
         grid-template-columns: 1fr;
@@ -3148,10 +3145,10 @@ h1, h2, h3, h4, h5 {
     min-height: 120px;
 }
 
-/* Gallery Section */
+
 .logo-image{
-    width: 120px;        /* adjust as you like */
-    height: auto;        /* keeps aspect ratio */
+    width: 120px;        
+    height: auto;        
     margin-bottom: 15px;
 } 
 .gallery-section {
@@ -3303,7 +3300,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-/* Lightbox Modal */
+
 .lightbox-modal {
     display: none;
     position: fixed;
@@ -3422,10 +3419,10 @@ h1, h2, h3, h4, h5 {
     font-size: 1rem;
 }
 
-/* About Page Styles */
+
 .logo-image{
-    width: 120px;        /* adjust as you like */
-    height: auto;        /* keeps aspect ratio */
+    width: 120px;        
+    height: auto;        
     margin-bottom: 15px;
 } 
 .mission-section {
@@ -3603,10 +3600,10 @@ h1, h2, h3, h4, h5 {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Contact Page Styles */
+
 .logo-image{
-    width: 120px;        /* adjust as you like */
-    height: auto;        /* keeps aspect ratio */
+    width: 120px;        
+    height: auto;        
     margin-bottom: 15px;
 } 
 .contact-section {
@@ -3755,7 +3752,7 @@ h1, h2, h3, h4, h5 {
     font-weight: normal;
 }
 
-/* FAQ Section */
+
 .faq-section {
     padding: 80px 0;
     background: var(--light);
@@ -3808,7 +3805,7 @@ h1, h2, h3, h4, h5 {
     max-height: 500px;
 }
 
-/* Map Section */
+
 .map-section {
     padding: 80px 0;
 }
@@ -3859,7 +3856,7 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .search-container {
         flex-direction: column;
@@ -4003,7 +4000,7 @@ h1, h2, h3, h4, h5 {
         justify-content: center;
     }
 }
-/* CSS Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -4036,7 +4033,7 @@ body {
     padding: 0 20px;
 }
 
-/* Typography */
+
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -4061,7 +4058,7 @@ p { margin-bottom: 1rem; }
     margin-bottom: 2rem;
 }
 
-/* Navigation */
+
 .navbar {
     background-color: white;
     box-shadow: var(--shadow);
@@ -4121,7 +4118,7 @@ p { margin-bottom: 1rem; }
     cursor: pointer;
 }
 
-/* Place Detail Header */
+
 .place-detail-header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -4187,7 +4184,7 @@ p { margin-bottom: 1rem; }
     color: var(--accent-color);
 }
 
-/* Place Image Slider */
+
 .place-slider-section {
     padding: 3rem 0;
 }
@@ -4281,7 +4278,7 @@ p { margin-bottom: 1rem; }
     object-fit: cover;
 }
 
-/* Place Details */
+
 .place-details {
     padding: 3rem 0;
 }
@@ -4337,7 +4334,7 @@ p { margin-bottom: 1rem; }
     margin-bottom: 0.5rem;
 }
 
-/* Sidebar */
+
 .place-sidebar {
     display: flex;
     flex-direction: column;
@@ -4394,7 +4391,7 @@ p { margin-bottom: 1rem; }
 .share-btn.instagram:hover { background-color: #e4405f; color: white; }
 .share-btn.whatsapp:hover { background-color: #25d366; color: white; }
 
-/* Temple of the Tooth Specific */
+
 .temple-ceremonies {
     background-color: #fef3c7;
     padding: 2rem;
@@ -4432,7 +4429,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Ella Rock Specific */
+
 .hike-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -4509,7 +4506,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Services Section */
+
 .place-services {
     padding: 3rem 0;
     background-color: #f8fafc;
@@ -4612,7 +4609,7 @@ p { margin-bottom: 1rem; }
     color: var(--text-light);
 }
 
-/* Festival Section (Temple of the Tooth) */
+
 .festival-section {
     padding: 3rem 0;
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
@@ -4649,7 +4646,7 @@ p { margin-bottom: 1rem; }
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Related Hikes (Ella Rock) */
+
 .related-hikes {
     padding: 3rem 0;
     background-color: #f0fdf4;
@@ -4692,7 +4689,7 @@ p { margin-bottom: 1rem; }
     color: var(--text-light);
 }
 
-/* Buttons */
+
 .btn-primary, .btn-secondary {
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius);
@@ -4729,7 +4726,7 @@ p { margin-bottom: 1rem; }
     margin-top: 0.5rem;
 }
 
-/* Footer */
+
 .footer {
     background-color: var(--dark-color);
     color: white;
@@ -4804,7 +4801,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     .place-details-content {
         grid-template-columns: 1fr;
@@ -4885,7 +4882,7 @@ p { margin-bottom: 1rem; }
         width: 100%;
     }
 }
-/* Galle Fort Specific Styles */
+
 .fort-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -4968,7 +4965,7 @@ p { margin-bottom: 1rem; }
     background-color: #f5f3ff;
 }
 
-/* Cultural Events Section */
+
 .cultural-events {
     padding: 3rem 0;
     background-color: #f0f9ff;
@@ -5037,7 +5034,7 @@ p { margin-bottom: 1rem; }
     font-weight: 500;
 }
 
-/* Photo Spots Section */
+
 .photo-spots {
     padding: 3rem 0;
 }
@@ -5089,7 +5086,7 @@ p { margin-bottom: 1rem; }
     font-weight: 500;
 }
 
-/* Responsive adjustments for Galle Fort */
+
 @media (max-width: 768px) {
     .fort-stats {
         grid-template-columns: repeat(2, 1fr);
@@ -5115,7 +5112,7 @@ p { margin-bottom: 1rem; }
         grid-template-columns: 1fr;
     }
 }
-/* Udawalawe National Park Specific Styles */
+
 .park-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5241,7 +5238,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Wildlife Calendar */
+
 .wildlife-calendar {
     padding: 3rem 0;
     background: linear-gradient(135deg, #065f46, #047857);
@@ -5279,7 +5276,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Other Parks Section */
+
 .other-parks {
     padding: 3rem 0;
     background-color: #f0fdf4;
@@ -5328,7 +5325,7 @@ p { margin-bottom: 1rem; }
     color: var(--text-light);
 }
 
-/* Responsive adjustments for Udawalawe */
+
 @media (max-width: 992px) {
     .park-stats {
         grid-template-columns: repeat(2, 1fr);
@@ -5356,7 +5353,7 @@ p { margin-bottom: 1rem; }
         grid-template-columns: 1fr;
     }
 }
-/* Negombo Beach Specific Styles */
+
 .beach-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5437,7 +5434,7 @@ p { margin-bottom: 1rem; }
     display: inline-block;
 }
 
-/* Cultural Attractions Section */
+
 .cultural-attractions {
     padding: 3rem 0;
     background-color: #f8fafc;
@@ -5491,7 +5488,7 @@ p { margin-bottom: 1rem; }
     margin-top: 0.5rem;
 }
 
-/* Transportation Section */
+
 .transportation-info {
     padding: 3rem 0;
     background: linear-gradient(135deg, #0ea5e9, #0284c7);
@@ -5549,7 +5546,7 @@ p { margin-bottom: 1rem; }
     opacity: 0.9;
 }
 
-/* Beach-specific service features */
+
 .service-features span {
     background-color: #e0f2fe;
     color: #0369a1;
@@ -5558,7 +5555,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.8rem;
 }
 
-/* Responsive adjustments for Negombo */
+
 @media (max-width: 992px) {
     .beach-stats {
         grid-template-columns: repeat(2, 1fr);
@@ -5591,7 +5588,7 @@ p { margin-bottom: 1rem; }
         margin-bottom: 0.25rem;
     }
 }
-/* Sigiriya Specific Styles */
+
 .sigiriya-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5788,7 +5785,7 @@ p { margin-bottom: 1rem; }
     font-size: 0.9rem;
 }
 
-/* Nearby Attractions */
+
 .nearby-attractions {
     padding: 3rem 0;
     background-color: #f8fafc;
@@ -5837,7 +5834,7 @@ p { margin-bottom: 1rem; }
     color: var(--text-light);
 }
 
-/* Cultural Triangle Section */
+
 .cultural-triangle {
     padding: 3rem 0;
     background: linear-gradient(135deg, #7c3aed, #5b21b6);
@@ -5881,7 +5878,7 @@ p { margin-bottom: 1rem; }
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive adjustments for Sigiriya */
+
 @media (max-width: 992px) {
     .sigiriya-stats {
         grid-template-columns: repeat(2, 1fr);
@@ -5927,13 +5924,13 @@ p { margin-bottom: 1rem; }
         width: 100%;
     }
 }
-/* Update existing navbar for login button */
+
 .nav-menu .nav-link.active {
     color: #3498db;
     border-bottom: 2px solid #3498db;
 }
 
-/* Add to existing media queries */
+
 @media (max-width: 768px) {
     .auth-container {
         margin: 20px;
@@ -5944,7 +5941,7 @@ p { margin-bottom: 1rem; }
     }
 }
 
-/* Add user profile indicator */
+
 .user-profile {
     display: flex;
     align-items: center;

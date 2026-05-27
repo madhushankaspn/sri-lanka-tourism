@@ -1,6 +1,6 @@
-// DOM Content Loaded
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
+    
     initNavigation();
     initImageSliders();
     initVideoPlayer();
@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQs();
     initLightbox();
     
-    // Set active nav link based on current page
+    
     setActiveNavLink();
 });
 
-// Navigation Functionality
+
 function initNavigation() {
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
@@ -27,7 +27,7 @@ function initNavigation() {
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
         
-        // Close menu when clicking outside
+        
         document.addEventListener('click', function(event) {
             if (!navMenu.contains(event.target) && !menuToggle.contains(event.target) && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
@@ -37,7 +37,7 @@ function initNavigation() {
     }
 }
 
-// Set active navigation link
+
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
@@ -54,9 +54,9 @@ function setActiveNavLink() {
     });
 }
 
-// Image Sliders
+
 function initImageSliders() {
-    // Home page slider
+    
     const homeSlider = document.querySelector('.slider');
     if (homeSlider) {
         const slides = document.querySelectorAll('.slide');
@@ -67,7 +67,7 @@ function initImageSliders() {
         let currentSlide = 0;
         const totalSlides = slides.length;
         
-        // Show specific slide
+        
         function showSlide(n) {
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
@@ -77,26 +77,26 @@ function initImageSliders() {
             dots[currentSlide].classList.add('active');
         }
         
-        // Next slide
+        
         function nextSlide() {
             showSlide(currentSlide + 1);
         }
         
-        // Previous slide
+        
         function prevSlide() {
             showSlide(currentSlide - 1);
         }
         
-        // Auto slide
+        
         let slideInterval = setInterval(nextSlide, 5000);
         
-        // Reset interval on interaction
+        
         function resetInterval() {
             clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide, 5000);
         }
         
-        // Event listeners
+        
         if (nextBtn) nextBtn.addEventListener('click', function() {
             nextSlide();
             resetInterval();
@@ -107,7 +107,7 @@ function initImageSliders() {
             resetInterval();
         });
         
-        // Dot navigation
+        
         dots.forEach((dot, index) => {
             dot.addEventListener('click', function() {
                 showSlide(index);
@@ -115,11 +115,11 @@ function initImageSliders() {
             });
         });
         
-        // Initialize first slide
+        
         showSlide(0);
     }
     
-    // Place detail page slider
+    
     const placeSlider = document.querySelector('.place-main-slider');
     if (placeSlider) {
         const placeSlides = document.querySelectorAll('.place-slide');
@@ -130,7 +130,7 @@ function initImageSliders() {
         let currentPlaceSlide = 0;
         const totalPlaceSlides = placeSlides.length;
         
-        // Show specific slide
+        
         function showPlaceSlide(n) {
             placeSlides.forEach(slide => slide.classList.remove('active'));
             placeThumbs.forEach(thumb => thumb.classList.remove('active'));
@@ -140,7 +140,7 @@ function initImageSliders() {
             placeThumbs[currentPlaceSlide].classList.add('active');
         }
         
-        // Event listeners
+        
         if (placeNextBtn) placeNextBtn.addEventListener('click', function() {
             showPlaceSlide(currentPlaceSlide + 1);
         });
@@ -149,19 +149,19 @@ function initImageSliders() {
             showPlaceSlide(currentPlaceSlide - 1);
         });
         
-        // Thumbnail navigation
+        
         placeThumbs.forEach((thumb, index) => {
             thumb.addEventListener('click', function() {
                 showPlaceSlide(index);
             });
         });
         
-        // Initialize first slide
+        
         showPlaceSlide(0);
     }
 }
 
-// Video Player
+
 function initVideoPlayer() {
     const playPauseBtn = document.getElementById('playPauseBtn');
     const promoVideo = document.getElementById('promoVideo');
@@ -177,14 +177,14 @@ function initVideoPlayer() {
             }
         });
         
-        // Update button when video ends
+        
         promoVideo.addEventListener('ended', function() {
             playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
         });
     }
 }
 
-// Search Functionality
+
 function initSearchFunctionality() {
     const searchBtn = document.getElementById('searchBtn');
     const searchInput = document.getElementById('searchInput');
@@ -201,7 +201,7 @@ function initSearchFunctionality() {
         });
     }
     
-    // Places page search
+    
     const placesSearchBtn = document.getElementById('placesSearchBtn');
     const placesSearchInput = document.getElementById('placesSearch');
     
@@ -218,18 +218,18 @@ function initSearchFunctionality() {
     }
 }
 
-// Perform search
+
 function performSearch(query) {
     if (query.trim() !== '') {
         alert(`Searching for: "${query}"\nIn a real implementation, this would redirect to search results.`);
-        // In a real implementation, you would redirect to search results page
-        // window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+        
+        
     } else {
         alert('Please enter a search term');
     }
 }
 
-// Filter places on places page
+
 function filterPlaces() {
     const searchTerm = document.getElementById('placesSearch').value.toLowerCase();
     const categoryFilter = document.getElementById('categoryFilter').value;
@@ -257,18 +257,18 @@ function filterPlaces() {
     });
 }
 
-// Initialize filtering functionality
+
 function initFiltering() {
-    // Places page category tabs
+    
     const categoryTabs = document.querySelectorAll('.category-tab');
     if (categoryTabs.length > 0) {
         categoryTabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                // Update active tab
+                
                 categoryTabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Filter places
+                
                 const category = this.getAttribute('data-category');
                 const placeCards = document.querySelectorAll('.place-card');
                 
@@ -283,16 +283,16 @@ function initFiltering() {
         });
     }
     
-    // Place detail page service tabs
+    
     const serviceTabs = document.querySelectorAll('.service-tab');
     if (serviceTabs.length > 0) {
         serviceTabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                // Update active tab
+                
                 serviceTabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Show corresponding service list
+                
                 const service = this.getAttribute('data-service');
                 const serviceLists = document.querySelectorAll('.service-list');
                 
@@ -306,16 +306,16 @@ function initFiltering() {
         });
     }
     
-    // Gallery filtering
+    
     const galleryFilterBtns = document.querySelectorAll('.filter-btn');
     if (galleryFilterBtns.length > 0) {
         galleryFilterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // Update active filter button
+                
                 galleryFilterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Filter gallery items
+                
                 const filter = this.getAttribute('data-filter');
                 const galleryItems = document.querySelectorAll('.gallery-item');
                 
@@ -331,7 +331,7 @@ function initFiltering() {
         });
     }
     
-    // Reset filters button
+    
     const resetFiltersBtn = document.getElementById('resetFilters');
     if (resetFiltersBtn) {
         resetFiltersBtn.addEventListener('click', function() {
@@ -339,7 +339,7 @@ function initFiltering() {
             document.getElementById('regionFilter').value = 'all';
             document.getElementById('placesSearch').value = '';
             
-            // Reset category tabs
+            
             document.querySelectorAll('.category-tab').forEach(tab => {
                 tab.classList.remove('active');
                 if (tab.getAttribute('data-category') === 'all') {
@@ -347,7 +347,7 @@ function initFiltering() {
                 }
             });
             
-            // Show all places
+            
             document.querySelectorAll('.place-card').forEach(card => {
                 card.style.display = 'block';
             });
@@ -355,7 +355,7 @@ function initFiltering() {
     }
 }
 
-// Gallery functionality
+
 function initGallery() {
     const uploadArea = document.getElementById('uploadArea');
     const fileInput = document.getElementById('fileInput');
@@ -365,7 +365,7 @@ function initGallery() {
             fileInput.click();
         });
         
-        // Drag and drop functionality
+        
         uploadArea.addEventListener('dragover', function(e) {
             e.preventDefault();
             uploadArea.style.borderColor = 'var(--primary)';
@@ -388,7 +388,7 @@ function initGallery() {
             }
         });
         
-        // File input change
+        
         fileInput.addEventListener('change', function() {
             if (this.files.length) {
                 alert(`Selected ${this.files.length} file(s) for upload`);
@@ -396,7 +396,7 @@ function initGallery() {
         });
     }
     
-    // Upload button
+    
     const uploadBtn = document.getElementById('uploadBtn');
     if (uploadBtn) {
         uploadBtn.addEventListener('click', function() {
@@ -410,7 +410,7 @@ function initGallery() {
             
             alert('Thank you for sharing your content! In a real implementation, this would upload your file to our server.');
             
-            // Reset form
+            
             document.getElementById('uploadTitle').value = '';
             document.getElementById('uploadDesc').value = '';
             document.getElementById('uploadCategory').value = '';
@@ -419,7 +419,7 @@ function initGallery() {
         });
     }
     
-    // Load more button
+    
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', function() {
@@ -428,35 +428,35 @@ function initGallery() {
     }
 }
 
-// Form handling
+
 function initForms() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
+            
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Simple validation
+            
             if (!name || !email || !subject || !message) {
                 alert('Please fill in all required fields');
                 return;
             }
             
-            // In a real implementation, you would send this data to a server
+            
             alert(`Thank you for your message, ${name}! We will get back to you soon.`);
             
-            // Reset form
+            
             contactForm.reset();
         });
     }
 }
 
-// FAQ functionality
+
 function initFAQs() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -468,7 +468,7 @@ function initFAQs() {
     });
 }
 
-// Lightbox functionality
+
 function initLightbox() {
     const viewButtons = document.querySelectorAll('.view-btn');
     const lightboxModal = document.getElementById('lightboxModal');
@@ -481,18 +481,18 @@ function initLightbox() {
                 const title = galleryItem.querySelector('h3').textContent;
                 const author = galleryItem.querySelector('p').textContent.replace('By: ', '');
                 
-                // In a real implementation, you would get this data from a database
-                // For now, we'll use placeholder data
+                
+                
                 document.getElementById('lightboxTitle').textContent = title;
                 document.getElementById('lightboxAuthor').textContent = author;
                 
-                // Show lightbox
+                
                 lightboxModal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
             });
         });
         
-        // Close lightbox
+        
         if (closeLightbox) {
             closeLightbox.addEventListener('click', function() {
                 lightboxModal.style.display = 'none';
@@ -500,7 +500,7 @@ function initLightbox() {
             });
         }
         
-        // Close lightbox when clicking outside
+        
         lightboxModal.addEventListener('click', function(e) {
             if (e.target === lightboxModal) {
                 lightboxModal.style.display = 'none';
@@ -508,7 +508,7 @@ function initLightbox() {
             }
         });
         
-        // Close lightbox with Escape key
+        
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && lightboxModal.style.display === 'flex') {
                 lightboxModal.style.display = 'none';
@@ -518,7 +518,7 @@ function initLightbox() {
     }
 }
 
-// Like button functionality
+
 document.addEventListener('click', function(e) {
     if (e.target.closest('.like-btn')) {
         const likeBtn = e.target.closest('.like-btn');
@@ -528,44 +528,44 @@ document.addEventListener('click', function(e) {
             icon.classList.remove('far');
             icon.classList.add('fas');
             
-            // Increment like count
+            
             const countSpan = likeBtn.querySelector('span') || likeBtn;
             let currentCount = parseInt(countSpan.textContent.match(/\d+/)) || 0;
             countSpan.textContent = countSpan.textContent.replace(/\d+/, currentCount + 1);
             
-            // Add visual feedback
+            
             likeBtn.style.color = '#e4405f';
             
-            // In a real implementation, you would update the database
+            
         }
     }
 });
 
-// Add these functions to your existing script.js
 
-// Check login status on page load
+
+
 function checkLoginStatus() {
     const userLoggedIn = localStorage.getItem('userLoggedIn');
     const userEmail = localStorage.getItem('userEmail');
     
     if (userLoggedIn === 'true' && userEmail) {
-        // Update navbar to show user profile
+        
         updateNavbarForLoggedInUser(userEmail);
     }
 }
 
-// Update navbar with user profile
+
 function updateNavbarForLoggedInUser(email) {
     const navMenu = document.querySelector('.nav-menu');
     if (!navMenu) return;
     
-    // Remove login link if exists
+    
     const loginLink = navMenu.querySelector('a[href="login.html"]');
     if (loginLink) {
         loginLink.remove();
     }
     
-    // Add user profile
+    
     const userProfile = document.createElement('a');
     userProfile.href = '#';
     userProfile.className = 'nav-link user-profile';
@@ -578,7 +578,7 @@ function updateNavbarForLoggedInUser(email) {
     
     navMenu.appendChild(userProfile);
     
-    // Add logout functionality
+    
     userProfile.addEventListener('click', (e) => {
         e.preventDefault();
         if (confirm('Are you sure you want to logout?')) {
@@ -589,9 +589,9 @@ function updateNavbarForLoggedInUser(email) {
     });
 }
 
-// Call this on page load
+
 document.addEventListener('DOMContentLoaded', function() {
     checkLoginStatus();
     
-    // Your existing code here...
+    
 });
